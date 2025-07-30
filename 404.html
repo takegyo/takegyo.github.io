@@ -2,51 +2,118 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
-        <title>たけぎょ車輛工場/Takegyo Train Factory</title>
-        <link rel="stylesheet" href="css/swiper.min.css" />
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+        <title>お探しのページは存在しません/たけぎょ車輛工場/Takegyo Train Factory</title>
+        <style type="text/css">
+            @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+
+            :root {
+                --background-start: #222222;
+                --background-end: #000000;
+                --red: #e55643;
+                --green: #2b9f5e;
+                --yellow: #f1c83c;
+                --shadow: #533d4a;
+            }
+
+            html{
+              height: 100%;
+            }
+
+            body{
+              font-family: 'Fjalla One', sans-serif;
+              background: linear-gradient(to bottom, var(--background-start) 0%, var(--background-end) 100%);
+            }
+
+            .container{
+              transform: translate(-50%, -50%);
+              top: 50%;
+              left: 50%;
+              display: block;
+              position: absolute;
+              max-width: 225px;
+            }
+
+            .button{
+              float: left;
+              position: relative;
+              bottom: -65px;
+              left: 50%;
+              transform: translateX(-50%);
+              color: var(--red);
+              opacity: 0;
+              visibility: hidden;
+            }
+
+            .button span{
+                transform: skew(-10deg);
+                display: block;
+                float: left;
+                color: #ffffff;
+            }
+
+            h1{
+                color: #fff;
+                font-size: 42px;
+                margin: 0;
+                line-height: 47px;
+                letter-spacing: 2px;
+            }
+            
+            .title{
+                transform: translateX(-50%);
+                display: block;
+                float: left;
+                left: 50%;
+                position: relative;
+            }
+
+            .title span {
+                transform: skew(-10deg);
+                display: block;
+                float: left;
+                min-width: 10px;
+                min-height: 10px;
+                position: relative;
+            }
+
+            .title:nth-child(1){
+                color: var(--red);
+                
+            }
+            .title:nth-child(2){
+                color: var(--green);
+            }
+            .title:nth-child(3){
+                color: var(--yellow);
+            }
+            
+            a {
+                position: fixed;
+                bottom: 10%;
+                left: 50%;
+                transform: translateX(-50%);
+                color: #ffffff;
+                visibility: hidden;
+            }
+            
+        </style>
     </head>
     <body>
-        
-    <header>
-        <a href="index.html"><div class="Logo"><img src ="img/Logo.png" alt="たけぎょ車輛工場"/></div></a>
-        <nav>
-            <ul>
-                <li><a href="blog/index.html">Blog</a></li>
-                <li><a href="profile/index.html">Profil</a></li>
-                <li><a href="about/index.html">À propos</a></li>
-                <li><a href="link/index.html">Lien</a></li>
-            </ul>
-        </nav>
-    </header>       
-    <section>
-        <h2>404</h2>
-        <p>このページは存在しません。</p>
-    </section>
-        
-    <p id="page-top"><a href="#"><div class="arow"></div></a></p>
-        
-    <footer>
-        <h2>@takegyo07</h2>
-        <div class="link">
-        
-        </div>
-        <small>&copy; 2025 たけぎょ</small>
-    </footer>
-    
-    <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+        <section class="container">
+            <h1>
+                <span class="title">404error</span>
+                <span class="title">Not found</span>
+                <span class="title"></span>
+            </h1>
+            <div class="button">お探しのページは存在しません</div>
+            <div class="button">Cette page n'existe pas.</div>
+            
+        </section>
+        
+        <a href="index.html" class="link">Retour à la page d'accueil</a>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+        <script src="notfound.js"></script>
     </body>
 </html>
