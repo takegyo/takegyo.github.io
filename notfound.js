@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
   applyLettering(".button");
   applyLettering(".link");
 
-  setTimeout(animation, 1000);
+  setTimeout(animation, 0);
 
   // const button = document.querySelector('.button');
   // if (button) {
