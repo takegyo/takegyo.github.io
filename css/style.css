@@ -97,8 +97,29 @@ nav a::after {
     transform-origin: center top;
     transition: transform 0.3s;
 }
+
 nav a:hover::after {
     transform: scale(1,1)
+}
+
+.link .fa-brands {
+    margin-left: 5px;
+    color: #000;
+    transition: all .3s ease-out;
+    position: relative;
+    cursor : pointer;
+}
+
+.link .fa-twitter:hover {
+    color: #00acee;
+}
+
+.link .fa-youtube:hover {
+    color: #c4302b;
+}
+
+.link .fa-s:hover {
+    color: #f0a328;
 }
 
 section {
@@ -358,6 +379,8 @@ time {
 }
 
 
+
+
 .blogA {
     display: flex;
     flex-wrap: wrap;
@@ -453,9 +476,6 @@ footer {
     text-align: center;
 }
 
-.fa-brands {
-    padding-bottom: 10px;
-}
 .active{
   opacity: 1;
   visibility: visible;
