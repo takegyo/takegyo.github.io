@@ -359,20 +359,38 @@ time {
 
 
 .blogA {
-    
+    display: flex;
+    flex-wrap: wrap;
+        
 }
 
 .list_blog {
-    display: flex;
-    padding: 10px;
-    margin: 10px;
-    border-top: solid 2px #aaaaaa;
-    border-bottom: solid 2px #aaaaaa;
-    height: 150px;
+    width: 300px;
+    background-color: #ffffff;
+    transition: all .1s ease-out;
 }
 
+.list_blog:hover {
+    background-color: #eeeeee;
+}
 
+.list_blog img {
+    width: calc(100% - 20px);
+    margin: 10px 10px 0 10px;
+    border-radius: 15px;
+}
 
+.list_blog .new_blog{
+    margin: 10px 10px 20px 10px;
+    height: auto;
+}
+
+#limited-text2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
 
 
 
@@ -435,6 +453,9 @@ footer {
     text-align: center;
 }
 
+.fa-brands {
+    padding-bottom: 10px;
+}
 .active{
   opacity: 1;
   visibility: visible;
