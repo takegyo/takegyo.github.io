@@ -102,15 +102,12 @@ nav a:hover::after {
     transform: scale(1,1)
 }
 
-.link .fa-brands:not(:last-child) {
-    margin-left: 10px;
-}
 .link .fa-brands {
-    margin-left: 5px;
     color: #000;
     transition: all .3s ease-out;
     position: relative;
     cursor : pointer;
+    margin-left: 10px;
 }
 
 .link .fa-twitter:hover {
@@ -482,4 +479,5 @@ footer {
 .active{
   opacity: 1;
   visibility: visible;
+
 }
