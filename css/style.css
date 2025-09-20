@@ -238,7 +238,7 @@ h2 {
     text-decoration: none;
     color: #ffffff;
     padding-right: 210px;
-    padding-top: 50px;
+    top: 42%;
     font-weight: 300;
     text-shadow: 0 0 2px #000000;
 }
@@ -544,8 +544,7 @@ footer {
     }
     
     .index-works {
-        display:flex;
-        flex-flow: column;
+        display: flex;
         align-items: center;
         justify-content: center;
     }
@@ -553,8 +552,8 @@ footer {
     .index-works a {
         position: relative;
         overflow: hidden;
-        width: 100%;
-        height: 200px;
+        width: 33%;
+        height: 10vh;
         text-decoration: none;
         margin-bottom: 10px;
     }
@@ -575,7 +574,7 @@ footer {
     
     .index-works a h3 {
         text-align: center;
-        font-size: 2vw;
+        font-size: 1vw;
         position: relative;
         display: block;
         align-items: center;
@@ -584,7 +583,7 @@ footer {
         color: #ffffff;
         padding-left: 0;
         padding-right: 0;
-        padding-top: 0;
+        top: 42%;
         padding-bottom: 0;
     }
     
