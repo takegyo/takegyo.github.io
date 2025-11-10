@@ -36,9 +36,32 @@ $(function(){
   });
 });
 
+
+document.addEventListener("DOMContentLoaded", function() {
+  // ここに前回のコードを記述
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  const timeElement = document.getElementById("last-time");
+  if (timeElement) { // 要素が存在するか確認
+    const dateString = timeElement.textContent;
+    const targetDate = new Date(dateString);
+
+    const diffTime = today.getTime() - targetDate.getTime();
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+    if (diffDays >= 0) {
+      timeElement.textContent = diffDays + "日前";
+    } else {
+      timeElement.textContent = "aaaaaaaaaaaaaa";
+    }
+  }
+});
+
+
 const applyTextLimit = () => {
   let maxLength = 52; //上限文字数
-  let limitedText = document.getElementById('limited-text');
+  let limitedText = document.getElementById('limited-text1');
   let originalText = limitedText.innerText;
   if (originalText.length > maxLength) {
     limitedText.innerText = originalText.substr(0, maxLength) + '...';
