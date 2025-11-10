@@ -3,6 +3,7 @@ body {
     font-weight: 400;
     font-style: normal;
     margin: 0;
+    letter-spacing: 0.1vw;
 }
 
 ::-webkit-scrollbar {
@@ -38,7 +39,6 @@ header {
     position: sticky;
     top: 0;
     background-color: #ffffff;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
 }
 
 header img {
@@ -147,6 +147,7 @@ h2 {
     width: 100%;
     padding-top: 175px;
     padding-bottom: 175px;
+    height: auto;
 }
 
 #index-photo h2,#index-photo p {
@@ -157,7 +158,7 @@ h2 {
 }
 
 #index-photo h2 {
-    padding-bottom: 10px;
+    padding-bottom: 1vw;
 }
 
 .index-sentence {
@@ -193,7 +194,7 @@ h2 {
     -moz-transition: all .3s ease-out;
     -ms-transition: all .3s ease-out;
     transition: all .3s ease-out;
-    filter: grayscale(75%);
+    filter: grayscale(75%) blur(1vh);
 }
 
 #fake:after {
@@ -221,7 +222,7 @@ h2 {
 }
 
 .index-works a:hover:after {
-    filter: grayscale(0%);
+    filter: grayscale(0%) blur(1vh);
     -moz-transform: scale(1.1);
     -webkit-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -229,7 +230,7 @@ h2 {
 }
 
 .index-works a h3 {
-    font-size: 20px;
+    font-size: 30px;
     position: relative;
     display: flex;
     align-items: center;
@@ -238,9 +239,11 @@ h2 {
     text-decoration: none;
     color: #ffffff;
     padding-right: 210px;
-    top: 42%;
-    font-weight: 300;
+    top: 50%;
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+    font-weight: 600;
     text-shadow: 0 0 2px #000000;
+    transform: translateY(-50%);
 }
 
 .side_by_side {
@@ -518,95 +521,61 @@ footer {
         display: none;
     }
     h2 {
-        font-size: 2vh;
+        font-size: 3.5vh;
     }
     p {
-        font-size: 1.5vh;
+        font-size: 2.5vh;
     }
     .index-sentence {
         display: none;
     }
     section {
-        width: 80%;
+        width: 90%;
     }
+    
+    article {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
     #index-photo {
-        padding-top: auto;
-        padding-bottom: auto;
+        height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
-    #index-photo h2, #index-photo p {
-        opacity: 1;
-        translate: 0;
-        transition: opacity 1s ease, translate 1s ease;
-        @starting-style {
-            opacity: 0;
-            translate: 0 50px;
-        }
+    
+    #index-photo h2,#index-photo p {
+    }
+    
+    .works h2 {
+        margin-top: 3vh;
+        text-align: center;
     }
     
     .index-works {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        flex-direction: column;
+        margin-top: 3vh;
+        margin-bottom: 0;
     }
 
     .index-works a {
-        position: relative;
-        overflow: hidden;
-        width: 33%;
-        height: 10vh;
-        text-decoration: none;
-        margin-bottom: 10px;
-    }
-
-    .index-works a:after {
-        position: absolute;
-        content: "";
-        display: block;
         width: 100%;
-        height: 100%;
-        top: 0;
-        -webkit-transition: all .3s ease-out;
-        -moz-transition: all .3s ease-out;
-        -ms-transition: all .3s ease-out;
-        transition: all .3s ease-out;
-        filter: grayscale(75%);
+        margin-bottom: 3vh;
+        height: 20vh;
     }
     
     .index-works a h3 {
-        text-align: center;
-        font-size: 1vw;
-        position: relative;
-        display: block;
-        align-items: center;
-        justify-content: center;
-        z-index: 1;
-        color: #ffffff;
-        padding-left: 0;
         padding-right: 0;
-        top: 42%;
-        padding-bottom: 0;
+        text-align: center;
+        font-size: 6vw;
     }
     
     #side_by_side {
         float: ;
-    }
-    
-    .contents {
-        margin: 0;
-        width: 100%;
-        font-size: 1.5vh;
-    }
-    
-    .contents li {
-        font-size: 1.5vh;
-    }
-    
-    .contents li div {
-        font-size: 1.5vh;
-    }
-    
-    .contents li div span {
-        font-size: 1.5vh;
     }
     
     .history {
@@ -615,14 +584,6 @@ footer {
     
     .blog {
         width: 100%;
-    }
-    
-    .history li {
-        padding: 10px;
-        margin-right: 10px;
-        margin-bottom: 10px;
-        margin-top: 10px;
-        color: #ffffff;
     }
     
     .new_blog {
@@ -637,10 +598,6 @@ footer {
         font-size: 2vh;
     }
     
-    time {
-        display: none;
-    }
-    
     .contents img {
         display: none;
     }
@@ -651,5 +608,51 @@ footer {
     
     .L2 {
         -webkit-line-clamp: 4;
+    }
+    
+    #page-top {
+      position: fixed;
+      bottom: 4vh;
+      right: 4vh;
+      font-size: 2.8vh;
+      line-height: 1;
+      z-index: 99;
+    }
+
+    #page-top a {
+        background-color: #3968d3;
+        text-decoration: none;
+        color: #fff;
+        width: 10vh;
+        height: 10vh;
+        text-align: center;
+        display: block;
+        border-radius: 18vh;
+        opacity: 0.9;
+        transition: all .3s ease;
+    }
+
+    #page-top a::before {   
+        content: '';
+        color: #fff;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 2.16vh 3.74124vh;
+        border-left-color: currentColor;
+        border-right: 0;
+        transform: translateY(-3%) rotate(-90deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+    }
+
+    #page-top a:hover {
+        text-decoration: none;
+        background-color: #7da1f5;
     }
 }
