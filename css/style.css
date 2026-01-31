@@ -1,6 +1,5 @@
 body {
     font-family: "Zen Kaku Gothic New", sans-serif;
-    font-weight: 300;
     font-style: normal;
     margin: 0;
     letter-spacing: 0.1vw;
@@ -27,6 +26,7 @@ h1 {
 p {
     line-height: 1.5;
     margin: 0;
+    font-weight: 300;
 }
 
 header {
@@ -51,6 +51,10 @@ header img {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.Logo i {
+    display: none;
 }
 
 nav ul {
@@ -107,6 +111,10 @@ nav a:hover::after {
     transform: scale(1,1)
 }
 
+.fa-solid.fa-house {
+    display: none;
+}
+
 .link .fa-brands {
     margin-left: 10px;
     color: #000;
@@ -131,6 +139,9 @@ section {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-top: 
 }
 
 article{
@@ -139,6 +150,7 @@ article{
 }
 
 h2 {
+    font-weight: 600;
     font-size: 35px;
     margin: auto;
     margin-bottom: 30px;
@@ -155,16 +167,23 @@ h2 p {
     background-position: 50%;
     background-size: cover;
     width: 100%;
-    padding-top: 175px;
-    padding-bottom: 175px;
-    height: auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    display: flex;
+}
+
+.sentence {
+    display: block;
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+    padding: 30px;
 }
 
 #index-photo h2,#index-photo p {
     margin: 0;
     color: #ffffff;
-    text-align: center;
-    text-shadow: 0 5px 10px #000000;
+    text-align: left;
 }
 
 #index-photo h2 {
@@ -174,8 +193,6 @@ h2 p {
 .index-sentence {
     font-size: 20px;
     text-align: center;
-    padding-top: 120px;
-    padding-bottom: 60px;
 }
 
 .index-works {
@@ -256,6 +273,8 @@ h2 p {
 
 .side_by_side {
     float: left;
+    padding-bottom: 60px;
+    
 }
 
 .side_by_side h2 {
@@ -345,11 +364,6 @@ time {
     display: flex;
 }
 
-.new_blog h3 {
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
 .new_blog {
     height: 150px;
     margin-left: 10px;
@@ -357,7 +371,6 @@ time {
 
 .new_blog time {
     margin-left: 7px;
-    margin-top: 10px;
     background-color: #3968d3;
 }
 
@@ -463,8 +476,6 @@ time {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  font-size: 14px;
-  line-height: 1;
   z-index: 99;
 }
 
@@ -474,34 +485,21 @@ time {
     color: #fff;
     width: 50px;
     height: 50px;
-    text-align: center;
     display: block;
-    border-radius: 90px;
+    border-radius: 100%;
     opacity: 0.9;
     transition: all .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#page-top a::before {   
-    content: '';
-    color: #fff;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: transparent;
-    border-width: 10.8px 18.7062px;
-    border-left-color: currentColor;
-    border-right: 0;
-    transform: translateY(-3%) rotate(-90deg);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: auto;
+#page-top i {
+    font-size: 25px;
+    display: block;
 }
 
 #page-top a:hover {
-    text-decoration: none;
     background-color: #7da1f5;
 }
 
@@ -527,19 +525,129 @@ footer {
 @media (max-width: 1300px) {
     body {
         font-size: 1.5vh;
+        padding-bottom: 6vw;
     }
+    
+    .top {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    
     header {
+        padding-bottom: 1vw;
+        padding-top: 1vw;
+        margin-top: 0;
+        margin-bottom: 0;
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        top: auto;
+        width: 90%;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .Logo {
+        margin-bottom: 0;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .Logo img {
         display: none;
     }
+    
+    nav {
+        width: 100%;
+        margin: 0 auto;
+        padding: 1vw;
+        background-color: rgba(255, 255, 255, 0.1);
+        border: 0.1vw solid rgba(255, 255, 255, 0.4);
+        border-right-color: rgba(255, 255, 255, 0.2);
+        border-bottom-color: rgba(255, 255, 255, 0.2);
+        border-radius: 99999px;
+        -webkit-backdrop-filter: blur(2vw);
+        backdrop-filter: blur(2vw);
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        font-size: 0;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    nav li {
+        margin: 0 1vw;
+        transition-duration: 300ms;
+        display: block;
+        font-size: clamp(12px, 3.2vw, 30px);
+    }
+    
+    nav li i {
+        display: block;
+    }
+
+    nav {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: right;
+        margin-top: -3.6vw;
+        padding-bottom: 1.1vw;
+    }
+
+    nav a {
+        position: relative;
+        color: #ffffff;
+        text-decoration: none;
+        padding: 1vw;
+        margin-left: 1vw;
+        transition: all .3s ease-out;
+    }
+
+    nav a:hover {
+        color: #3968d3;
+    }
+
+    nav a::after {
+        display: none
+    }
+    
+    .fa-solid.fa-house {
+        display: inline-block;
+    }
+
+    .link .fa-brands {
+        margin-left: 1vw;
+        color: #ffffff;
+        transition: all .2s ease-out;
+        position: relative;
+        cursor : pointer;
+    }
+    
+    .sentence {
+        width: 90%;
+    }
+    
     h2 {
         font-size: 3.5vh;
     }
     p {
         font-size: 2.5vh;
     }
+    
     .index-sentence {
         display: none;
     }
+    
     section {
         width: 90%;
     }
@@ -627,43 +735,6 @@ footer {
       right: 4vh;
       font-size: 2.8vh;
       line-height: 1;
-      z-index: 99;
-    }
-
-    #page-top a {
-        background-color: #3968d3;
-        text-decoration: none;
-        color: #fff;
-        width: 10vh;
-        height: 10vh;
-        text-align: center;
-        display: block;
-        border-radius: 18vh;
-        opacity: 0.9;
-        transition: all .3s ease;
-    }
-
-    #page-top a::before {   
-        content: '';
-        color: #fff;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-color: transparent;
-        border-width: 2.16vh 3.74124vh;
-        border-left-color: currentColor;
-        border-right: 0;
-        transform: translateY(-3%) rotate(-90deg);
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-    }
-
-    #page-top a:hover {
-        text-decoration: none;
-        background-color: #7da1f5;
+      z-index: 999;
     }
 }
