@@ -3,25 +3,23 @@
     <head>
         <meta charset="UTF-8">
         <meta name=”viewport” content=”width=device-width,initial-scale=1.0″> 
-        <title>竹橋車輛工場/Takebashi Rail Factory</title>
+        <title>竹橋車輛工場 / Takebashi Rail Factory</title>
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
         <link rel="stylesheet" href="css/swiper.min.css" />
         <link rel="stylesheet" href="css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0f6e7f5ebe.js" crossorigin="anonymous"></script>
         <link rel="apple-touch-icon" sizes="180x180" href="img/NewLogoImage.png">
         <link rel="icon" type="image/png" sizes="32x32" href="img/NewLogoImage.png">
     </head>
     <body>
         
-    <div class="top">
         <header>
             <a href="index.html"><div class="Logo"><img src ="img/NewLogo.png" alt="竹橋車輛工場"></div></a>
             <nav>
                 <ul>
-                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
                     <li><a href="blog/index.html">Blog</a></li>
                     <li><a href="profile/index.html">Profil</a></li>
                     <li><a href="about/index.html">À propos</a></li>
@@ -41,35 +39,33 @@
                 <p>Je pensais que je pourrais voir ce quotidien pour toujours.<br>Mais peut-être que ce jour ne reviendra plus jamais.</p>
             </div>
         </div>
-    </div>
         
     <section>
-        <article><p class="index-sentence">竹橋車輛工場へようこそ。ちょっと昔の電車が好きな学生が呑気に作る、鉄道系サイトです。</p></article>
+        <article><p class="scroll_up index-sentence">竹橋車輛工場へようこそ。ちょっと昔の電車が好きな学生が呑気に作る、鉄道系サイトです。</p></article>
         
         <article class="works">
-            <h2>Mes œuvres<p>主な作品</p></h2>
+            <h2 class="scroll_up">Mes œuvres<p>主な作品</p></h2>
             <div class="index-works">
-                <a href="fake/index.html" id="fake"><h3>ウソ電</h3></a>
-                <a href="/index.html" id="picture"><h3>写真館</h3></a>
-                <a href="blog/index.html" id="blog"><h3>ブログ</h3></a>
+                <a href="fake/index.html" id="fake" class="scroll_up"><h3>ウソ電</h3></a>
+                <a href="photo/index.html" id="picture" class="scroll_up timing02"><h3>写真館</h3></a>
+                <a href="blog/index.html" id="blog" class="scroll_up timing03"><h3>ブログ</h3></a>
             </div>
         </article>
         
         <article>
             <div class="side_by_side blog">
-                <h2>最新ブログ記事</h2>
-                <div class="contents">
+                <h2 class="scroll_up">最新ブログ記事</h2>
+                <div class="contents aaa scroll_up timing0" onClick="location.href='blog/index.html'" style="cursor: pointer;">
                     <img src="" onerror="this.src='img/noimage.png'"/ height="130px">
                     <div class="new_blog">
                         <h3 class="L1">ありがとう旧2000系<time datetime="2025-01-14">2025-01-14</time></h3>
                         <p id="limited-text" class="L2">西武から完全撤退した旧2000系の最後の2本2417F＆2419Fが近江鉄道へ譲渡。約半世紀の活躍を振り返ろう！</p>
-                        <a href="/blog/" id="button">見る</a>
                     </div>
                 </div>
             </div>
             <div class="side_by_side history">
-                <h2>更新履歴</h2>
-                <div class="contents">
+                <h2 class="scroll_up">更新履歴</h2>
+                <div class="contents scroll_up">
                     <ul>
                         <a href="news/2025/01131.html"><li class="site"><div><time datetime="2025-01-14">2025-01-14</time><span class="index_tag_news">お知らせ</span>サイト開設しました<span class="index_tag">サイト全般</span> <i class="fa-solid fa-arrow-up-right-from-square fa-xs"></i></div></li></a>
                         <a><li class="site"><div><time datetime="2025-01-13">2025-01-13</time>製作開始<span class="index_tag">サイト全般</span></div></li></a>
@@ -79,7 +75,30 @@
             </div>
         </article>
         
-        
+        <article class="swipe">
+            <h2>適当に写真が流れるだけ</h2>
+            <!-- Slider main container -->
+            <div class="swiper index-picture">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="img/Index/1.png"></div>
+            <div class="swiper-slide"><img src="img/Index/2.png"></div>
+            <div class="swiper-slide"><img src="img/Index/3.png"></div>
+            <div class="swiper-slide"><img src="img/Index/4.png"></div>
+            <div class="swiper-slide"><img src="img/Index/5.png"></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <!-- If we need scrollbar -->
+            <!-- <div class="swiper-scrollbar"></div> -->
+            </div>
+        </article>
         
     </section>
         
@@ -99,5 +118,4 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/main.js"></script>
     </body>
-
 </html>
