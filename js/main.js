@@ -1,3 +1,18 @@
+//scroll_effect
+$(window).scroll(function () {
+  var scrollAnimationElm = document.querySelectorAll('.scroll_up');
+  var scrollAnimationFunc = function () {
+    for (var i = 0; i < scrollAnimationElm.length; i++) {
+      var triggerMargin = 100;
+      if (window.innerHeight > scrollAnimationElm[i].getBoundingClientRect().top + triggerMargin) {
+        scrollAnimationElm[i].classList.add('on');
+      }
+    }
+  }
+  window.addEventListener('load', scrollAnimationFunc);
+  window.addEventListener('scroll', scrollAnimationFunc);
+});
+
 var swiper = new Swiper(".index-picture", {
     loop: true,
     spaceBetween: 30,
@@ -60,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 const applyTextLimit = () => {
-  let maxLength = 52; //上限文字数
+  let maxLength = 104; //上限文字数
   let limitedText = document.getElementById('limited-text1');
   let originalText = limitedText.innerText;
   if (originalText.length > maxLength) {
