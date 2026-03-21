@@ -1,9 +1,17 @@
+html {
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-style: normal;
     margin: 0;
     letter-spacing: 0.1vw;
     text-box-trim: trim-both;
+}
+
+:root {
+  --main-width: 1200px;
 }
 
 ::-webkit-scrollbar {
@@ -74,7 +82,7 @@ header img {
 
 .Logo {
     margin-bottom: 0;
-    width: 1200px;
+    width: var(--main-width);
     margin-left: auto;
     margin-right: auto;
 }
@@ -99,7 +107,7 @@ nav li {
 }
 
 nav {
-    width: 1200px;
+    width: var(--main-width);
     margin-left: auto;
     margin-right: auto;
     text-align: right;
@@ -158,12 +166,11 @@ nav a:hover::after {
 }
 
 section {
-    width: 1200px;
+    width: var(--main-width);
     margin-left: auto;
     margin-right: auto;
     margin-top: 80px;
     margin-bottom: 80px;
-    border-top: 
 }
 
 article{
@@ -184,33 +191,61 @@ h2 p {
 }
 
 #index-photo {
-    background-image: url("../img/Index/top.png");
+    background-image: url("../img/Index/DSC_0274.JPG");
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
     width: 100%;
-    padding-top: 250px;
-    padding-bottom: 250px;
+    height: calc(100vh - 80px);
     display: flex;
+    position: relative;
 }
 
 .sentence {
+    writing-mode: vertical-rl;
+    position: absolute;
     display: block;
-    width: 1200px;
-    height: 100%;
-    margin: auto;
-    padding: 30px;
+    left: 50%;
+    bottom: 50%;
+    transform: translateX(-50%) translateY(50%);
+    height: 95%;
+    width: var(--main-width);
 }
 
 #index-photo h2,#index-photo p {
+    display: inline-block;
     margin: 0;
-    color: #ffffff;
-    text-shadow: #000 0 0 10px;
+    color: #000;
+    background-color: #ffffff;
     text-align: left;
+    font-weight: 900;
+    padding: 10px;
 }
 
 #index-photo h2 {
+    font-size: 3vh;
     padding-bottom: 1vw;
+}
+
+#index-photo p {
+    font-size: 2vh;
+    padding-bottom: 1vw;
+}
+
+.fa-angle-down {
+    font-size: 4vh;
+    z-index: 999;
+    color: #ffffff;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all .3s ease-out;
+    opacity: 0.3;
+}
+
+.fa-angle-down:hover {
+    opacity: 0.5;
 }
 
 .index-sentence {
@@ -294,10 +329,15 @@ h2 p {
     border: none;
 }
 
+.side_by_side_container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
 .side_by_side {
-    float: left;
     padding-bottom: 30px;
-    
 }
 
 .side_by_side h2 {
@@ -471,7 +511,7 @@ time {
 
 
 .sub {
-    width: 1200px;
+    width: var(--main-width);
     margin: auto;
     height: 200px;
     padding: 0;
@@ -499,7 +539,7 @@ time {
 }
 
 .bread {
-    width: 1200px;
+    width: var(--main-width);
     margin: 5px auto;
 }
 
@@ -691,7 +731,7 @@ footer {
     text-align: center;
 }
 
-.active{
+.active {
   opacity: 1;
   visibility: visible;
 }
