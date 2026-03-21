@@ -1,3 +1,36 @@
+$(function(){
+  var pagetop = $('#page-top');
+  pagetop.hide();
+  $(window).scroll(function () {
+     if ($(this).scrollTop() > 100) {
+          pagetop.fadeIn();
+     } else {
+          pagetop.fadeOut();
+     }
+  });
+pagetop.click(function (e) {
+     e.preventDefault(); // デフォルトの挙動（#）をキャンセル
+     lenis.scrollTo(0);  // Lenisの機能で一番上(0)までスルスル戻る
+     return false;
+  });
+});
+
+const lenis = new Lenis();
+
+function raf(time) {
+  lenis.raf(time);
+  requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+// #index-photo 内のアンカーリンクをクリックした時の処理
+document.querySelector('#index-photo a[href^="#"]').addEventListener('click', (e) => {
+  e.preventDefault(); // デフォルトのジャンプ機能をキャンセル
+  const target = e.currentTarget.getAttribute('href'); // "#body" を取得
+  lenis.scrollTo(target); // Lenisの機能でスムーズにスクロール
+});
+
 //scroll_effect
 $(window).scroll(function () {
   var scrollAnimationElm = document.querySelectorAll('.scroll_up');
@@ -35,21 +68,6 @@ var swiper = new Swiper(".index-picture", {
     },
 });
 
-$(function(){
-  var pagetop = $('#page-top');
-  pagetop.hide();
-  $(window).scroll(function () {
-     if ($(this).scrollTop() > 100) {
-          pagetop.fadeIn();
-     } else {
-          pagetop.fadeOut();
-     }
-  });
-  pagetop.click(function () {
-     $('body, html').animate({ scrollTop: 0 }, 500);
-     return false;
-  });
-});
 
 
 document.addEventListener("DOMContentLoaded", function() {
