@@ -935,7 +935,7 @@ footer {
     */
     
     #side_by_side {
-        float: ;
+        flex-direction: column;
     }
     
     .history {
