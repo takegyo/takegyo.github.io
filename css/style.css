@@ -934,7 +934,7 @@ footer {
     }
     */
     
-    #side_by_side {
+    .side_by_side_container {
         flex-direction: column;
     }
     
