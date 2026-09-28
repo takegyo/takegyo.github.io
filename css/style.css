@@ -847,7 +847,7 @@ footer {
 
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .list_blog {
         width: calc(100% / 2 - 5px);
     }
