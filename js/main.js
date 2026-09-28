@@ -24,6 +24,41 @@ function raf(time) {
 
 requestAnimationFrame(raf);
 
+// headerタグを直接取得
+const header = document.querySelector('header');
+
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function updateHeader() {
+  const currentScrollY = window.scrollY;
+  const headerHeight = header.offsetHeight; // ヘッダーの高さを自動取得
+
+  // 最上部（ヘッダーの高さ以内）では常に表示
+  if (currentScrollY <= headerHeight) {
+    header.classList.remove('is-hidden');
+  } 
+  // 下スクロール：隠す
+  else if (currentScrollY > lastScrollY) {
+    header.classList.add('is-hidden');
+  } 
+  // 上スクロール：表示する
+  else {
+    header.classList.remove('is-hidden');
+  }
+
+  lastScrollY = currentScrollY;
+  ticking = false;
+}
+
+// スクロールイベントの最適化（描画フレームに合わせて実行）
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    window.requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
+});
+
 // #index-photo 内のアンカーリンクをクリックした時の処理
 document.querySelector('#index-photo a[href^="#"]').addEventListener('click', (e) => {
   e.preventDefault(); // デフォルトのジャンプ機能をキャンセル
